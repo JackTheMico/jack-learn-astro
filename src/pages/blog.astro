@@ -2,7 +2,7 @@
 import BlogPost from "../components/BlogPost.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 const allPosts = Object.values(
-	await import.meta.glob("./posts/*.md", { eager: true }),
+	import.meta.glob("./posts/*.md", { eager: true }),
 );
 const pageTitle = "My Astro Learning Blog";
 ---

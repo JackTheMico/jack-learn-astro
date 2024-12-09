@@ -1,6 +1,6 @@
 ---
 import Social from "./Social.astro";
-const platform = "github";
+const platform = ["github", "twitter", "youtube"];
 const username = "JackTheMico";
 ---
 <style>
@@ -13,7 +13,5 @@ const username = "JackTheMico";
 
 
 <footer>
-  <Social platform="twitter" username="astrodotbuild" />
-  <Social platform="github" username="withastro" />
-  <Social platform="youtube" username="astrodotbuild" />
+  {platform.map((plfm: string)=> <Social platform={plfm} username={username} />)}
 </footer>
