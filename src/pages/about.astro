@@ -1,7 +1,5 @@
 ---
-import Footer from "../components/Footer.astro";
-import Navigation from "../components/Navigation.astro";
-import "../styles/global.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "About Me";
 const identity = {
 	firstName: "Sarah",
@@ -26,7 +24,7 @@ const textCase = "uppercase";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
-    <style define:vars={{ skillColor, fontWeight, textCase }}>
+    <style is:global define:vars={{ skillColor, fontWeight, textCase }}>
       h1 {
         color: purple;
         font-size: 4rem;
@@ -38,10 +36,8 @@ const textCase = "uppercase";
       }
     </style>
   </head>
-  <body>
-    <Navigation />
-    <h1>{pageTitle}</h1>
-    <p>Here are a few facts about me:</p>
+  <BaseLayout pageTitle={pageTitle}>
+    <h2>Here are a few facts about me:</h2>
     <ul>
       <li>My name is {identity.firstName}.</li>
       <li>
@@ -71,6 +67,5 @@ const textCase = "uppercase";
         <p>My goal is not 3 days.</p>
       )
     }
-    <Footer />
-  </body>
+  </BaseLayout>
 </html>
