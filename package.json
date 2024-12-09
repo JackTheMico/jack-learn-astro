@@ -1,14 +1,21 @@
 {
-  "name": "jack-blog",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "astro": "^5.0.3"
-  }
+	"name": "jack-blog",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro",
+		"lint": "biome lint --write .",
+		"lint:fix": "biome check --write ."
+	},
+	"dependencies": {
+		"@sentry/astro": "^8.42.0",
+		"@spotlightjs/astro": "^2.2.0",
+		"astro": "^5.0.3"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4"
+	}
 }
