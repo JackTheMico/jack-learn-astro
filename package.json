@@ -11,9 +11,12 @@
 		"lint:fix": "biome check --write ."
 	},
 	"dependencies": {
+		"@astrojs/preact": "^4.0.0",
+		"@astrojs/rss": "^4.0.10",
 		"@sentry/astro": "^8.42.0",
 		"@spotlightjs/astro": "^2.2.0",
-		"astro": "^5.0.3"
+		"astro": "^5.0.3",
+		"preact": "^10.25.1"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4"
