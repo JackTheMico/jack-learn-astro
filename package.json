@@ -8,7 +8,8 @@
 		"preview": "astro preview",
 		"astro": "astro",
 		"lint": "biome lint --write .",
-		"lint:fix": "biome check --write ."
+		"lint:fix": "biome check --write .",
+		"unsafe": "biome check --fix --unsafe ."
 	},
 	"dependencies": {
 		"@astrojs/preact": "^4.0.0",
